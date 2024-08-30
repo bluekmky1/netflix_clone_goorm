@@ -1,0 +1,190 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Noto Sans KR", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+body {
+  background-color: #111;
+}
+
+/* header */
+
+.navbar {
+  background-color: #111;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.navbar ul {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.navbar li {
+  list-style: none;
+  padding: 1rem;
+}
+
+.navbar li a {
+  padding: 2px 2px;
+  text-decoration: none;
+  color: #fff;
+  transition: color 300ms;
+}
+
+.navbar li a:hover {
+  color: gray;
+}
+
+.logo {
+  height: 45px;
+  width: 90px;
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 100%;
+  transition: transform 300ms;
+}
+
+.logo img:hover {
+  transform: scale(1.1);
+}
+
+/* banner */
+
+.banner {
+  background-image: url("images/banner.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 448px;
+  color: white;
+}
+
+.banner-contents {
+  margin-left: 30px;
+  padding-top: 190px;
+  height: 190px;
+}
+
+.banner-title {
+  font-size: 3rem;
+  font-weight: 800;
+  padding-bottom: 0.3rem;
+}
+
+.banner-btns {
+  display: flex;
+  gap: 16px;
+}
+
+.banner-btns {
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+:is(.play-btn, .info-btn) :is(button) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 42px;
+  border-radius: 4px;
+  padding: 0 16px 0 16px;
+  font-size: 16px;
+  border: none;
+  transition: background-color 300ms;
+}
+
+:is(.play-btn button, .info-btn button) :is(p) {
+  margin-bottom: 3px;
+}
+
+:is(.play-btn button, .info-btn button) :is(img) {
+  margin-right: 8px;
+}
+
+.play-btn button {
+  width: 96px;
+}
+
+.info-btn button {
+  background-color: rgba(57, 57, 57, 0.6);
+  color: #fff;
+  width: 174px;
+}
+
+.play-btn button img {
+  width: 16px;
+}
+
+.info-btn button img {
+  width: 24px;
+  margin-right: 8px;
+}
+
+.play-btn button:hover {
+  background-color: rgb(171, 163, 163);
+  cursor: pointer;
+}
+
+.info-btn button:hover {
+  background-color: rgba(57, 57, 57);
+  cursor: pointer;
+}
+
+.banner-description {
+  line-height: 1.5;
+  padding-top: 0.5rem;
+  font-size: 1rem;
+}
+
+/* row */
+.row {
+  color: white;
+}
+
+.row h2 {
+  margin-left: 30px;
+  margin-top: 20px;
+}
+
+.row-posters {
+  display: flex;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  padding: 20px 30px;
+}
+
+.row-poster {
+  width: 100%;
+  object-fit: contain;
+  max-height: 100px;
+  margin-right: 10px;
+  transition: 450ms;
+  border-radius: 8px;
+}
+
+.row-poster:hover {
+  margin-left: 10px;
+  margin-right: 20px;
+  transform: scale(1.1);
+}
+
+.row-posters::-webkit-scrollbar {
+  display: none;
+}
+
+.row-posterLarge {
+  max-height: 250px;
+}
